@@ -1,6 +1,10 @@
 <?php
 require 'flight/Flight.php';
 
+Flight::route('/', function() {
+	echo '<a href="http://plato.cs.virginia.edu/~cs4720f13beet/find_closest_building/CS4720">go here</a>';
+});
+
 Flight::route('/find_closest_building/@activity_name', function($activity_name){
 	Flight::render('find_closest_building.php', array('activity_name' => $activity_name));
 });
