@@ -80,7 +80,7 @@
 			$dist = getDistance($building['x'], $building['y'], $middleX, $middleY);
 			if ($dist < $min) {
 				$min = $dist;
-				$building = $building['building_name'];
+				$building = array("building_name" => $building['building_name'], "x" => $building["x"], "y" => $building["y"]);
 			}
 		}
 		return $building;
