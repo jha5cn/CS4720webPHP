@@ -46,7 +46,7 @@
 	$middleY = getMedian($users, 'y');
 
 	$closest_building = getClosest($buildings, $middleX, $middleY);
-	echo json_encode($closest_building);
+	echo '[' . $closest_building . ']';
 
 	function getMedian($users, $axis) {
 		if ($axis == 'x') {
