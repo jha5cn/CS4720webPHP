@@ -1,0 +1,12 @@
+categories.php:
+http://plato.cs.virginia.edu/~cs4720f13beet/categories/academic => ["cs1110","cs3240","cs3330","cs4630","cs4720","cs4750"]
+http://plato.cs.virginia.edu/~cs4720f13beet/categories/athletic => ["baseball","basketball","football","lifting","soccer","swimming"]
+
+
+find_closest_building_copy.php:
+http://plato.cs.virginia.edu/~cs4720f13beet/find_closest_building_copy/basketball => ["Aquatic Fitness Center","38.03284547","-78.51414408"]
+http://plato.cs.virginia.edu/~cs4720f13beet/find_closest_building_copy/cs4720 => ["Kerchof Hall","38.032387","-78.508193"]
+
+get_users_for_activity.php:
+http://plato.cs.virginia.edu/~cs4720f13beet/activities/cs4720/users => ["jeff","kevin","mason","sherriff"]
+http://plato.cs.virginia.edu/~cs4720f13beet/activities/cs4720/basketball => ["kevin"]
