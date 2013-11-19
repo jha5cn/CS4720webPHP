@@ -9,4 +9,8 @@ http://plato.cs.virginia.edu/~cs4720f13beet/find_closest_building_copy/cs4720 =>
 
 get_users_for_activity.php:
 http://plato.cs.virginia.edu/~cs4720f13beet/activities/cs4720/users => ["jeff","kevin","mason","sherriff"]
-http://plato.cs.virginia.edu/~cs4720f13beet/activities/cs4720/basketball => ["kevin"]
+http://plato.cs.virginia.edu/~cs4720f13beet/activities/basketball/users => ["kevin"]
+
+get_locations_for_activity.php
+http://plato.cs.virginia.edu/~cs4720f13beet/activities/CS4720/locations => ["Aquatic Fitness Center","Booker House","Chemistry Bldg","Gilmer Hall","John Paul Johns Arena","Kerchof Hall"]
+http://plato.cs.virginia.edu/~cs4720f13beet/basketball/locations => ["Aquatic Fitness Center"]

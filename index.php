@@ -35,6 +35,10 @@ Flight::route('/activities/@activity/users', function($activity) {
 	Flight::render('get_users_for_activity.php', array('activity' => $activity));
 });
 
+Flight::route('/activities/@activity/locations', function($activity) {
+	Flight::render('get_locations_for_activity.php', array('activity' => $activity));
+});
+
 
 Flight::route('/@name/@id:[0-9]{3}', function($name, $id){
     echo "Welcome $name!  Your id is $id";
