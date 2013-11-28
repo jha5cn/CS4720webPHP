@@ -1,0 +1,24 @@
+
+CREATE TABLE Groups (
+    group_id int AUTO_INCREMENT NOT NULL,
+    activity_name varchar(255) NOT NULL,
+    building_name varchar(255) NOT NULL,
+    start_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    end_time TIMESTAMP DEFAULT 0,
+    recurrence varchar(7) DEFAULT '0000000',
+    PRIMARY KEY (group_id),
+    FOREIGN KEY (activity_name) REFERENCES Activities(activity_name),
+    FOREIGN KEY (building_name) REFERENCES Buildings(building_name)
+    
+    )engine=InnoDB;
+
+    CREATE TABLE URegisterG(
+    user_name varchar(255) NOT NULL,
+    group_id int NOT NULL,
+    admin int(1) DEFAULT 1 NOT NULL,
+    FOREIGN KEY (user_name) REFERENCES Users(user_name),
+    FOREIGN KEY (group_id) REFERENCES Groups(group_id),
+    PRIMARY KEY (user_name, group_id)
+    
+    
+)engine=InnoDB;

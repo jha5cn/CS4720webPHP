@@ -1,6 +1,6 @@
 <?php
 	/*
-	 * Given an activty name, returns an array of all users registered to that activity
+	 * Given an activty name, returns an array of all locations registered to that activity
 	 */
 	include_once 'dblogin.php';
 

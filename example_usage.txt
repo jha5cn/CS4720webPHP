@@ -14,3 +14,35 @@ http://plato.cs.virginia.edu/~cs4720f13beet/activities/basketball/users => ["kev
 get_locations_for_activity.php
 http://plato.cs.virginia.edu/~cs4720f13beet/activities/CS4720/locations => ["Aquatic Fitness Center","Booker House","Chemistry Bldg","Gilmer Hall","John Paul Johns Arena","Kerchof Hall"]
 http://plato.cs.virginia.edu/~cs4720f13beet/basketball/locations => ["Aquatic Fitness Center"]
+
+
+
+
+
+
+AFTER REVAMP OF DATABASE:
+find_closest_building_kevin.php:
+http://plato.cs.virginia.edu/~cs4720f13beet/find_closest_building_group/1 => ["Aquatic Fitness Center","38.03284547","-78.51414408"]
+http://plato.cs.virginia.edu/~cs4720f13beet/find_closest_building_group/1000 => ["none",38.032939,-78.504814]
+
+get_users_for_group.php
+http://plato.cs.virginia.edu/~cs4720f13beet/groups/1/users => ["jeff","kevin"]
+http://plato.cs.virginia.edu/~cs4720f13beet/groups/1000/users => []
+
+get_locations_for_activity_new.php
+http://plato.cs.virginia.edu/~cs4720f13beet/activities/cs4720/locations_new => {"Aquatic Fitness Center":{"x":"38.03284547","y":"-78.51414408"},"Booker House":{"x":"38.036489","y":"-78.502174"},"Chemistry Bldg":{"x":"38.03379","y":"-78.511611"},"Gilmer Hall":{"x":"38.034276","y":"-78.513005"},"John Paul Johns Arena":{"x":"38.04575","y":"-78.50767"},"Kerchof Hall":{"x":"38.032387","y":"-78.508193"}}
+
+register_full.php
+http://plato.cs.virginia.edu/~cs4720f13beet/register/kevin/kevin/-38/-38 => {"success":true}
+
+get_user_groups.php
+http://plato.cs.virginia.edu/~cs4720f13beet/users/kevin/groups => [{"group_id":1,"activity_name":"basketball","building_name":"Aquatic Fitness Center","start_time":"2013-11-27 16:13:28","end_time":"0000-00-00 00:00:00","recurrence":"0000000","num_registered":2,"admin":1},{"group_id":2,"activity_name":"cs4720","building_name":"Alderman Library","start_time":"2013-11-27 17:00:42","end_time":"0000-00-00 00:00:00","recurrence":"0000000","num_registered":4,"admin":1}]
+
+get_groups_for_activity.php
+http://plato.cs.virginia.edu/~cs4720f13beet/activities/cs4720/groups => {"2":{"start_time":"2013-11-27 17:00:42","end_time":"0000-00-00 00:00:00","building_name":"Alderman Library","recurrence":"0000000","users":["jeff","kevin","mason","sherriff"]},"3":{"start_time":"2013-11-27 19:27:21","end_time":"0000-00-00 00:00:00","building_name":"Newcomb","recurrence":"0000000","users":[]}}
+
+add_user_to_group.php
+http://plato.cs.virginia.edu/~cs4720f13beet/groups/1/add/g => {"success":true}
+
+add_group_to_activity.php
+http://plato.cs.virginia.edu/~cs4720f13beet/activities/cs4720/add/2013-11-27%208:45:45/2013-11-27%208:45:45/Amphitheater => {"success":true}

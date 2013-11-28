@@ -1,0 +1,15 @@
+data_model.txt
+
+Activities(PK activity_name, category)
+ActivityLocations(activity_name, building_name)
+Buildings(PK building_name, building_x, building_y)
+
+Groups(PK group_id, activity_name, building_name, start_time, end_time, recurrence) // where recurrence is "0001100" for repeat thursdays and fridays
+// NOTE: building_name does not enforce it is in list of ActivityLocations for activity_name
+URegisterG(user_name, group_id, admin) // admin is one bit deciding whether they can change settings for group
+
+Users(user_name, user_password)
+
+
+calendarEvents
+calendarUsers
