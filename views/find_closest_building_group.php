@@ -1,16 +1,16 @@
 <?php
-	// we are given $activity_name
-	// given an activity name, find average location of registered users registered to that activity, 
+	// we are given $group_id
+	// given a group_id, find average location of registered users registered to that activity, 
 	// then return closest building to that location
 	include_once 'dbloginkevin.php';
 	// step 1: gather all users and their coordinates registered to activity passed
 	$users = array();
 	if ($stmt->prepare('SELECT user_name, user_x, user_y
-						FROM registeredTo 
+						FROM URegisterG 
 						NATURAL JOIN
 						Users
-						WHERE activity_name=?')) {
-		$stmt->bind_param('s', $activity_name);
+						WHERE group_id=?')) {
+		$stmt->bind_param('s', $group_id);
 		$stmt->execute();
 		$stmt->bind_result($user_name, $user_x, $user_y);
 		while ($stmt->fetch()) {
@@ -24,15 +24,17 @@
 	}
 	*/
 
+
 	// step 2: gather all buildings and their coordinates where activity can take place
 	$buildings = array();
 	$stmt = $db_connection->stmt_init();
 	if ($stmt->prepare('SELECT building_name, building_x, building_y
-						FROM ActivityLocations 
-						NATURAL JOIN
-						Buildings
-						WHERE activity_name=?')) {
-		$stmt->bind_param('s', $activity_name);
+						FROM Groups
+						NATURAL JOIN Activities
+						NATURAL JOIN ActivityLocations 
+						NATURAL JOIN Buildings
+						WHERE group_id=?')) {
+		$stmt->bind_param('s', $group_id);
 		$stmt->execute();
 		$stmt->bind_result($building_name, $building_x, $building_y);
 		while ($stmt->fetch()) {
@@ -45,10 +47,11 @@
 	$middleX = getMedian($users, 'x');
 	$middleY = getMedian($users, 'y');
 	$closest_building = getClosest($buildings, $middleX, $middleY);
-
-	$outputTemp = array();
-	$outputTemp[] = $closest_building['building_name'];
-	echo json_encode($outputTemp);
+	$array = array();
+	$array[] = $closest_building['building_name'];
+	$array[] = $closest_building['x'];
+	$array[] = $closest_building['y'];
+	echo json_encode($array);
 	//echo json_encode(array("closest_building" => $closest_building));
 
 	function getMedian($users, $axis) {
@@ -104,4 +107,5 @@
 		} 
 		return $a['y'] < $b['y'] ? -1 : 1;
 	}
+	
 ?>
