@@ -28,11 +28,13 @@
 	// step 2: gather all buildings and their coordinates where activity can take place
 	$buildings = array();
 	$stmt = $db_connection->stmt_init();
-	if ($stmt->prepare('SELECT building_name, building_x, building_y
+	if ($stmt->prepare('SELECT b.building_name, b.building_x, b.building_y
 						FROM Groups
-						NATURAL JOIN Activities
-						NATURAL JOIN ActivityLocations 
-						NATURAL JOIN Buildings
+						NATURAL JOIN Activities a
+						JOIN ActivityLocations al
+							ON a.activity_name=al.activity_name
+						JOIN Buildings b
+							ON al.building_name=b.building_name
 						WHERE group_id=?')) {
 		$stmt->bind_param('s', $group_id);
 		$stmt->execute();
