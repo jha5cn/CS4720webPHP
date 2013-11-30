@@ -33,7 +33,7 @@ get_locations_for_activity_new.php
 http://plato.cs.virginia.edu/~cs4720f13beet/activities/cs4720/locations_new => {"Aquatic Fitness Center":{"x":"38.03284547","y":"-78.51414408"},"Booker House":{"x":"38.036489","y":"-78.502174"},"Chemistry Bldg":{"x":"38.03379","y":"-78.511611"},"Gilmer Hall":{"x":"38.034276","y":"-78.513005"},"John Paul Johns Arena":{"x":"38.04575","y":"-78.50767"},"Kerchof Hall":{"x":"38.032387","y":"-78.508193"}}
 
 register_full.php
-http://plato.cs.virginia.edu/~cs4720f13beet/register/kevin/kevin/-38/-38 => {"success":true}
+http://plato.cs.virginia.edu/~cs4720f13beet/users/register/kevin/kevin/-38/-38 => {"success":true}
 
 get_user_groups.php
 http://plato.cs.virginia.edu/~cs4720f13beet/users/kevin/groups => [{"group_id":1,"activity_name":"basketball","building_name":"Aquatic Fitness Center","start_time":"2013-11-27 16:13:28","end_time":"0000-00-00 00:00:00","recurrence":"0000000","num_registered":2,"admin":1},{"group_id":2,"activity_name":"cs4720","building_name":"Alderman Library","start_time":"2013-11-27 17:00:42","end_time":"0000-00-00 00:00:00","recurrence":"0000000","num_registered":4,"admin":1}]

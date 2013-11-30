@@ -15,7 +15,7 @@
 		$stmt->execute();
 		$stmt->bind_result($building_name, $x, $y);
 		while ($stmt->fetch()) {
-			$locations[$building_name] = array("x" => $x, "y" => $y);
+			$locations[] = array("building_name" => $building_name, "x" => $x, "y" => $y);
 		}
 	}
 

@@ -26,9 +26,14 @@
 				}
 			}
 		}
+		$ret_val = array();
+		// convert to array
+		foreach ($groups as $k => $val) {
+			$ret_val[] = array('group_id' => $k, 'start_time' => $val['start_time'], 'end_time' => $val['end_time'], 'building_name' => $val['building_name'], 'recurrence' => $val['recurrence'], 'users' => $val['users']);
+		}
 	}
 
-	echo json_encode($groups);
+	echo json_encode($ret_val);
 
 
 
