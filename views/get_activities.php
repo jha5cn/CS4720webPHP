@@ -12,10 +12,17 @@
 		$stmt->execute();
 		$stmt->bind_result($activity_name, $category);
 		while ($stmt->fetch()) {
-			if (array_key_exists($category, $categories)) {
-				array_push($categories[$category], $activity_name);
+			// find index
+			$index = -1;
+			for ($i = 0; $i < count($categories); ++$i) {
+				if ($categories[$i]['category'] == $category) {
+					$index = $i;
+				}
+			}
+			if ($index != -1) {
+				array_push($categories[$index]['activities'], $activity_name);
 			} else {
-				$categories[$category] = array($activity_name);
+				$categories[] = array("category" => $category, "activities" => array($activity_name));
 			}
 			
 		}
