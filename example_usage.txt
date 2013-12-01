@@ -46,3 +46,6 @@ http://plato.cs.virginia.edu/~cs4720f13beet/groups/1/add/g => {"success":true}
 
 add_group_to_activity.php
 http://plato.cs.virginia.edu/~cs4720f13beet/activities/cs4720/add/2013-11-27%208:45:45/2013-11-27%208:45:45/Amphitheater => {"success":true}
+
+remove_from_group.php
+http://plato.cs.virginia.edu/~cs4720f13beet/users/removefromgroup/k/kevin/1 => {success: true}

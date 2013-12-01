@@ -9,6 +9,10 @@ Flight::route('/users/register/@user_name/@user_password/@user_x/@user_y', funct
 	Flight::render('register_full.php', array('user_name' => $user_name, 'user_password' => $user_password, 'user_x' => $user_x, 'user_y' => $user_y));
 });
 
+Flight::route('/users/removefromgroup/@user_name/@user_password/@group_id', function($user_name, $user_password, $group_id){
+	Flight::render('remove_from_group.php', array('user_name' => $user_name, 'user_password' => $user_password, 'group_id' => $group_id));
+});
+
 Flight::route('/users/@user_name/groups', function($user_name){
 	Flight::render('get_user_groups.php', array('user_name' => $user_name));
 });
