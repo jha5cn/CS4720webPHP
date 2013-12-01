@@ -46,6 +46,9 @@ Flight::route('/categories/@category_name', function($category_name) {
 	Flight::render('categories.php', array('category_name' => $category_name));
 });
 
+Flight::route('/activities', function() {
+	Flight::render('get_activities.php');
+});
 
 Flight::route('/activities/@activity/users', function($activity) {
 	Flight::render('get_users_for_activity.php', array('activity' => $activity));
