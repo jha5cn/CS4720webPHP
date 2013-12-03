@@ -45,7 +45,7 @@ get_groups_for_activity.php
 http://plato.cs.virginia.edu/~cs4720f13beet/activities/cs4720/groups => {"2":{"start_time":"2013-11-27 17:00:42","end_time":"0000-00-00 00:00:00","building_name":"Alderman Library","recurrence":"0000000","users":["jeff","kevin","mason","sherriff"]},"3":{"start_time":"2013-11-27 19:27:21","end_time":"0000-00-00 00:00:00","building_name":"Newcomb","recurrence":"0000000","users":[]}}
 
 add_user_to_group.php
-http://plato.cs.virginia.edu/~cs4720f13beet/groups/1/add/g => {"success":true}
+http://plato.cs.virginia.edu/~cs4720f13beet/groups/1/add/g => {"success":true, "group_id" => 28}
 
 add_group_to_activity.php
 http://plato.cs.virginia.edu/~cs4720f13beet/activities/cs4720/add/2013-11-27%208:45:45/2013-11-27%208:45:45/Amphitheater => {"success":true}

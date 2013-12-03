@@ -2,7 +2,7 @@
 	/*
 	 * Given an activty name, returns an array of all users registered to that activity
 	 */
-	include_once 'dblogin.php';
+	include_once 'dbloginkevin.php';
 
 	$users = array();
 	if ($stmt->prepare('SELECT user_name

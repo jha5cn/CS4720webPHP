@@ -2,7 +2,7 @@
 	// we are given $activity_name
 	// given an activity name, find average location of registered users registered to that activity, 
 	// then return closest building to that location
-	include_once 'dblogin.php';
+	include_once 'dbloginkevin.php';
 	// step 1: gather all users and their coordinates registered to activity passed
 	$users = array();
 	if ($stmt->prepare('SELECT user_name, user_x, user_y
