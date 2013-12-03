@@ -70,6 +70,10 @@ Flight::route('/groups/@group_id/users', function($group_id) {
 	Flight::render('get_users_for_group.php', array('group_id' => $group_id));
 });
 
+Flight::route('/groups/@group_id', function($group_id) {
+	Flight::render('get_group.php', array('group_id' => $group_id));
+});
+
 Flight::route('/activities/@activity/locations', function($activity) {
 	Flight::render('get_locations_for_activity.php', array('activity' => $activity));
 });

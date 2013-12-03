@@ -25,6 +25,8 @@ find_closest_building_kevin.php:
 http://plato.cs.virginia.edu/~cs4720f13beet/find_closest_building_group/1 => ["Aquatic Fitness Center","38.03284547","-78.51414408"]
 http://plato.cs.virginia.edu/~cs4720f13beet/find_closest_building_group/1000 => ["none",38.032939,-78.504814]
 
+get_group.php
+
 get_users_for_group.php
 http://plato.cs.virginia.edu/~cs4720f13beet/groups/1/users => ["jeff","kevin"]
 http://plato.cs.virginia.edu/~cs4720f13beet/groups/1000/users => []
