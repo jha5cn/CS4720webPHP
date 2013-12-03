@@ -14,7 +14,7 @@
 		$stmt->execute();
 		$stmt->bind_result($activity_name, $building_name, $start_time, $end_time, $recurrence, $building_x, $building_y);
 		if ($stmt->fetch()) {
-			$group = array("activity_name" => $activity_name, "building" => array("building_name" => $building_name, "building_x" => $building_x, "building_y" => $building_y), "start_time" => $start_time, "end_time" => $end_time, "recurrence" => $recurrence);
+			$group = array("activity_name" => $activity_name, "building_name" => $building_name, "building_x" => $building_x, "building_y" => $building_y, "start_time" => $start_time, "end_time" => $end_time, "recurrence" => $recurrence);
 		}
 		
 	}
