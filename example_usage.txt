@@ -26,6 +26,7 @@ http://plato.cs.virginia.edu/~cs4720f13beet/find_closest_building_group/1 => ["A
 http://plato.cs.virginia.edu/~cs4720f13beet/find_closest_building_group/1000 => ["none",38.032939,-78.504814]
 
 get_group.php
+http://plato.cs.virginia.edu/~cs4720f13beet/groups/1 => {"activity_name":"basketball","building":{"building_name":"Aquatic Fitness Center","building_x":"38.03284547","building_y":"-78.51414408"},"start_time":"2013-11-27 16:13:28","end_time":"0000-00-00 00:00:00","recurrence":"0000000"}
 
 get_users_for_group.php
 http://plato.cs.virginia.edu/~cs4720f13beet/groups/1/users => ["jeff","kevin"]
